@@ -1,0 +1,14 @@
+{% for movie in movies %}
+
+    <img src="{{movie.poster}}" height="200" width="150">
+    <p>{{movie.title}}</p>
+    <p>{{movie.release_year}}</p>
+    <p>{{movie.duration}}</p>
+    <p>{{movie.genre}}</p>
+    <p>{{movie.director}}</p>
+    <p>{{movie.cast}}</p>
+    <p>{{movie.IMDB_Rating}}</p>
+    <p>{{movie.description}}</p>
+
+    <br><br>
+{% endfor %}

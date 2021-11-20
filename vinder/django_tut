@@ -1,0 +1,37 @@
+## Instalacja django
+python -m pip install django
+python -m django --version
+
+path>django-admin startproject appname  -stworzenie projektu appname to nazwa projektu
+path>cd appname
+path\appname>python manage.py runserver   - uruchomienie serwera
+#serwer nasluchuje na http://127.0.0.1:8000/
+path\appname>python manage.py startapp appname_rest_api -stworzenie aplikacji wewnatrz projektu
+python manage.py runserver
+
+Jak stworzysz tabele w bazie danych to:
+\appname>python manage.py migrate - wtedy migruja modele bazodanowe
+
+jak stworzysz nowy model to:
+python manage.py makemigrations
+
+
+tworzenia admina:
+python manage.py createsuperuser
+
+
+przejscie do shella:
+python manage.py shell
+>>> u1 = User()
+>>> u1.username = "user3"
+>>> u1.set_password("user3")
+>>> u1.save()
+>>> u1 = User()
+>>> u1.username = "user4"
+>>> u1.set_password("user4")
+>>> u1.save()
+>>> exit()
+VinderSession.objects.filter(init_user_username = "user1")
+
+
+http://localhost:8000/vinder/user_sessions/user1
